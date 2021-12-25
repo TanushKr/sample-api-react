@@ -4,7 +4,7 @@ import "./Home.css";
 
 const Home = () => {
   const [input, setInput] = useState(1);
-  const [data, setData] = useState({});
+  const [data, setData] = useState(undefined);
 
   const handleChange = (e) => {
     console.log(e.target.value);
@@ -16,21 +16,35 @@ const Home = () => {
       .get(`http://localhost:5001/displaydata?inputId=${input}`)
       .then((res) => {
         console.log(res.data);
-        // createTable(res.data[0]);
         setData(res.data);
       })
       .catch((err) => console.log(err));
   };
 
   return (
-    <div className="wrapper">
-      <div className="input_box">
-        <label htmlFor="sampleInput">Enter the input</label>
-        <input type="text" id="sampleInput" onChange={handleChange} />
-        <button onClick={getData}>Search</button>
+    <>
+      <div className="wrapper">
+        <div className="input_box">
+          <label htmlFor="sampleInput">Enter the input</label>
+          <input type="text" id="sampleInput" onChange={handleChange} />
+          <button onClick={getData}>Search</button>
+        </div>
       </div>
-      {/* <p>{data}</p> */}
-    </div>
+      {data && (
+        <div className="container">
+          <div className="card">
+            {data &&
+              Object.entries(data[0]).map(([key, value], index) => {
+                return (
+                  <li className="list_items" key={index}>
+                    {key} : {value.toString()}
+                  </li>
+                );
+              })}
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

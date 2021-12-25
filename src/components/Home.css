@@ -8,7 +8,7 @@
 }
 
 .input_box {
-  height: 40vh;
+  height: 30vh;
   /* width: 500px; */
   margin-top: 150px;
 }
@@ -38,4 +38,22 @@ button {
 
 button:hover {
   background-color: rgb(4, 14, 150);
+}
+
+.container {
+  /* background-color: brown; */
+  width: fit-content;
+  color: black;
+  margin: 20px;
+}
+
+.card {
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.list_items {
+  list-style-type: none;
 }
