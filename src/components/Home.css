@@ -1,0 +1,41 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  /* background-color: blue; */
+}
+
+.input_box {
+  height: 40vh;
+  /* width: 500px; */
+  margin-top: 150px;
+}
+
+label {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#sampleInput {
+  height: 30px;
+  width: 300px;
+  font-size: 1rem;
+}
+
+button {
+  display: block;
+  padding: 10px 20px 10px 20px;
+  margin: 10px 0;
+  margin-left: auto;
+  border: 0px;
+  background-color: rgb(1, 74, 143);
+  border-radius: 5px;
+  color: white;
+}
+
+button:hover {
+  background-color: rgb(4, 14, 150);
+}
