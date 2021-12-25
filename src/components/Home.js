@@ -25,25 +25,28 @@ const Home = () => {
     <>
       <div className="wrapper">
         <div className="input_box">
-          <label htmlFor="sampleInput">Enter the input</label>
+          <label htmlFor="sampleInput">Enter the ID</label>
           <input type="text" id="sampleInput" onChange={handleChange} />
           <button onClick={getData}>Search</button>
         </div>
       </div>
-      {data && (
-        <div className="container">
-          <div className="card">
-            {data &&
-              Object.entries(data[0]).map(([key, value], index) => {
-                return (
-                  <li className="list_items" key={index}>
-                    {key} : {value.toString()}
-                  </li>
-                );
-              })}
-          </div>
-        </div>
-      )}
+      <div className="container">
+        {data &&
+          data.map((obj) => {
+            return (
+              <div className="card">
+                {obj &&
+                  Object.entries(obj).map(([key, value], index) => {
+                    return (
+                      <li className="list_items" key={index}>
+                        {key.toUpperCase()} : {value.toString()}
+                      </li>
+                    );
+                  })}
+              </div>
+            );
+          })}
+      </div>
     </>
   );
 };
