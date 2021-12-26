@@ -6,7 +6,7 @@ NodeJS: [https://nodejs.org/en/download/](http://localhost:3000)
 ## Steps to run the application
 
 Step 1: Install Node.js\
-Step 2: Clone this repository or Download as zip file ( [https://github.com/TanushKr/sample-api-react/archive/refs/heads/master.zip] ) and extract the contents.\
+Step 2: Clone this repository or Download as zip file ( https://github.com/TanushKr/sample-api-react/archive/refs/heads/master.zip ) and extract the contents.\
 Step 3: Open the terminal and navigate to the extracted folder.\
 Step 4: Run the following command to intall dependencies:\
 ```npm install```\
