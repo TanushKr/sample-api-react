@@ -1,9 +1,9 @@
-# `Sample Api`
+# Sample Api
 
 Requirements :
 Node: [https://nodejs.org/en/download/](http://localhost:3000)
 
-## `Steps to run the application`
+## Steps to run the application
 
 Step 1: Install Node.js
 Step 2: Clone this repository or Download as zip file and extract the contents.
